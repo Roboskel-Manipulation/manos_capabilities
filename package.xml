@@ -10,13 +10,10 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <build_depend>manos</build_depend>
   <build_depend>manos_vision</build_depend>
   <build_depend>manos_description</build_depend>
-  <build_export_depend>manos</build_export_depend>
   <build_export_depend>manos_vision</build_export_depend>
   <build_export_depend>manos_description</build_export_depend>
-  <exec_depend>manos</exec_depend>
   <exec_depend>manos_vision</exec_depend>
   <exec_depend>manos_description</exec_depend>
 
