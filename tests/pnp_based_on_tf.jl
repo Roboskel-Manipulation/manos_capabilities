@@ -56,7 +56,7 @@ function straight2Action(base_link, ee_link, arm_group_name, sac, pick_trans, pi
     pickup = PickupAction()
     #println(fieldnames(pickup.action_goal.goal))
     pickup.action_goal.goal.target_name = "detected_object"
-    pickup.action_goal.goal.group_name = "gripper"
+    pickup.action_goal.goal.group_name = "arm"
     pickup.action_goal.goal.end_effector = "gripper"
     pickup.action_goal.goal.possible_grasps = [grasp]
     pickup.action_goal.goal.allowed_touch_objects = ["all"]
@@ -94,7 +94,6 @@ function main()
     scene_interface[:remove_world_object]("detected_object")
     # add an object to be grasped
     p = PoseStamped()
-    p.header.stamp = rospy.Time(0)
     p.header.frame_id = "base_link"
     p.pose.position.x = 0
     p.pose.position.y = 0.5
